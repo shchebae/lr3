@@ -1,0 +1,66 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__wrapper">
+            <div class="header__logo">
+                <div class="logo__item">
+                    <img src="{% static 'img/лого.jpg' %}" alt="">
+                    <p>DentalClinic</p>
+                </div>
+            </div>
+            <div class="header__menu">
+                <nav>
+                    <ul>
+                        <li><a href="{% url 'home' %}">ГЛАВНАЯ</a></li>
+                        <li><a href="{% url 'uslugi' %}">УСЛУГИ</a></li>
+                        <li> <a href="{% url 'map' %}">КОНТАКТЫ</a></li>
+                        <li>+7 (8352) 36-36-36</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        {% block content %}{% endblock %}
+    </div>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__logo">
+                <div class="logo__item">
+                    <img src="{% static 'img/лого.jpg' %}" alt="">
+                    <p>DentalClinic</p>
+                </div>
+                <p class="mini-descr">Лечение зубов в Москве и Московской области</p>
+            </div>
+            <div class="footer__info">
+                <ul>
+                    <li>Информация</li>
+                    <li>ПОЧЕМУ МЫ</li>
+                    <li>ОТЗЫВЫ</li>
+                    <li>КОНТАКТЫ</li>
+                </ul>
+                <ul>
+                    <li>Запись на прием</li>
+                    <li>ПОЧЕМУ МЫ</li>
+                    <li>ОТЗЫВЫ</li>
+                    <li>КОНТАКТЫ</li>
+                </ul>
+                <ul>
+                    <li>Врачи клиники</li>
+                    <li>ПОЧЕМУ МЫ</li>
+                    <li>ОТЗЫВЫ</li>
+                    <li>КОНТАКТЫ</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

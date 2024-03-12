@@ -1,0 +1,22 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %}Главная{% endblock %}
+{% block content %}
+<section class="map">
+    <div class="absolute">
+        <div class="absolute__wrapper">
+            <p>Адрес: г. Чебоксары, пр. М.Горького 18</p>
+            <p>Телефон: +7 (8352) 36-36-36 </p>
+            <p>E-mail: <a href="#">denta21@mail.ru</a></p>
+            <p>Режим работы: Понедельник - пятница</p>
+            <p>8:00 - 20:00, Суббота 8:00-14:00,</p>
+            <p>Воскресенье - выходной</p>
+        </div>
+
+    </div>
+    <iframe
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A866ce212dd45d51ce6d8704d5d9f68c05a9ed703d464c9ec2077a5fd31cab476&amp;source=constructor"
+        width="100%" height="476" frameborder="0">
+    </iframe>
+</section>
+{% endblock %}

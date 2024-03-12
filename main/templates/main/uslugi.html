@@ -1,0 +1,25 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %}Главная{% endblock %}
+{% block content %}
+<section class="uslugi">
+    <h1>Стоимость <span>услуг</span></h1>
+    <hr>
+    <table>
+        <tbody>
+            <tr>
+                <th>Наименование услуги</th>
+                <th>Лечение зубов без микроскопа</th>
+                <th>Лечение зубов с микроскопом</th>
+            </tr>
+            {% for el in fr %}
+            <tr>
+                {% for e in el %}
+                <td>{{e}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+{% endblock %}
